@@ -69,3 +69,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+**TODO:**
+~~A working web page~~
+~~Spinner while loading data from TMDBW or wikipedia~~
+~~Search for related movies~~
+Bonus # 1: Use Material-UI library, Material-UI look
+Bonus # 2: Tests
+
+**Preview:**
+![image](https://user-images.githubusercontent.com/50679897/164782156-4a0bdae3-2a90-4f39-80c7-4ba187d5e649.png)
+![image](https://user-images.githubusercontent.com/50679897/164782318-d7ce02df-845f-456d-bfa1-2f5b8a540182.png)
+
+
