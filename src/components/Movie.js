@@ -1,28 +1,38 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
-const Movie = ({
-  title,
-  poster_path,
-  overview,
-  vote_average,
-  backdrop_path,
-}) => (
+
+const setVoteClass = (vote) => {
+  if (vote >= 7.5) {
+    return "green";
+  } else if (vote >= 6) {
+    return "yellow";
+  } else {
+    return "red";
+  }
+};
+
+const Movie = ({ title, overview, vote_average, backdrop_path }) => (
   <div className="movie">
-    <img src={IMAGE_BASE_URL + backdrop_path} alt={title} />
+    <a href={"https://en.wikipedia.org/wiki/" + title} target="_blank">
+      <img
+        src={
+          backdrop_path
+            ? IMAGE_BASE_URL + backdrop_path
+            : "https://media.istockphoto.com/photos/popcorn-and-clapperboard-picture-id1191001701?k=20&m=1191001701&s=612x612&w=0&h=uDszifNzvgeY5QrPwWvocFOUCw8ugViuw-U8LCJ1wu8="
+        }
+        alt={title}
+      />
+    </a>
     <div className="movie-info">
-      <h3>{title}</h3>
-      <span>{vote_average}</span>
+      <a>{title}</a>
+      <span className={`tag ${setVoteClass(vote_average)}`}>
+        {vote_average}
+      </span>
     </div>
     <div className="movie-effect">
-    <h3>Overview</h3>
-    <p>{overview}</p>
+      <a>Overview</a>
+      <p>{overview}</p>
     </div>
   </div>
 );
