@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Apex_MovieApp/static/css/main.daa4a421.css",
+    "main.js": "/Apex_MovieApp/static/js/main.43517ae7.js",
+    "static/js/787.f8c454d4.chunk.js": "/Apex_MovieApp/static/js/787.f8c454d4.chunk.js",
+    "static/media/CICR_logo.png": "/Apex_MovieApp/static/media/CICR_logo.eed028472a2394581c52.png",
+    "index.html": "/Apex_MovieApp/index.html",
+    "main.daa4a421.css.map": "/Apex_MovieApp/static/css/main.daa4a421.css.map",
+    "main.43517ae7.js.map": "/Apex_MovieApp/static/js/main.43517ae7.js.map",
+    "787.f8c454d4.chunk.js.map": "/Apex_MovieApp/static/js/787.f8c454d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.daa4a421.css",
+    "static/js/main.43517ae7.js"
+  ]
+}
