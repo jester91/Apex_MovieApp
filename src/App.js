@@ -16,26 +16,21 @@ const SEARCH_BASE_URL = `${API_URL}search/movie?api_key=${API_KEY}&query=`;
 
 const POPULAR_BASE_URL = `${API_URL}movie/popular?api_key=${API_KEY}`;
 
-const FILTER_BASE_URL = `${API_URL}movie/popular?api_key=${API_KEY}&page=5`;
-
-export { SEARCH_BASE_URL, POPULAR_BASE_URL, FILTER_BASE_URL, API_URL, API_KEY };
-
 const override = css`
   display: block;
   margin: 0 auto;
   border-color: red;
-  padding-top:25%
+  padding-top: 25%;
 `;
 
 //core app
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-
     getMovies(POPULAR_BASE_URL);
     setTimeout(() => {
       setLoading(false);
@@ -70,8 +65,7 @@ function App() {
     <>
       <header>
         <a href="/">
-        <img className="logo" src={logo} alt="Logo" />
-
+          <img className="logo" src={logo} alt="Logo" />
         </a>
 
         <form onSubmit={handleOnSubmit}>
@@ -84,7 +78,12 @@ function App() {
         </form>
       </header>
       {loading ? (
-        <HashLoader css={override} size={150} color={"00ffa3"} loading={loading} />
+        <HashLoader
+          css={override}
+          size={150}
+          color={"00ffa3"}
+          loading={loading}
+        />
       ) : (
         <div className="movie-container">
           {movies.length > 0 &&
